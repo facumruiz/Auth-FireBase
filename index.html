@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+  <!-- LIBRERIAS SDK PARA FIREBASE
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+          <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>  
+
+
+
+  <!-- Enlazo Base de datos(FireBase) en index.html)-->
+  <script>
+    // Configuracion de mi app en FireBase
+    
+    var firebaseConfig = {
+      apiKey: "AIzaSyDIpE_VNe0WLT41qq1X97yAR2Ci5a5E9jg",
+      authDomain: "inicio-logueo.firebaseapp.com",
+      databaseURL: "https://inicio-logueo-default-rtdb.firebaseio.com", //enlace de base de datos
+      projectId: "inicio-logueo", //nombre de mi app
+      storageBucket: "inicio-logueo.appspot.com",
+      messagingSenderId: "521087264609",
+      appId: "1:521087264609:web:919cd43c2f4dd456a94720",
+      measurementId: "G-YNDTXHJ6G5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+</head>
+<body>
+    <!--View logeo usuario-->
+    <input id="email" type="email" placeholder="Ingresa email">
+    <input id="password" type="email" placeholder="Ingresa contraseña">
+      <!--Boton con funcion onclick:
+          envio los datos de email y contraseña a base de datos-->
+    <button onclick="funcion()">Enviar</button>
+
+    <!-- llamo a mi app.js.... dentro esta declarada la funcion del boton "Enviar"-->
+    <script src="app.js"></script>
+  
+</body>
+</html>
