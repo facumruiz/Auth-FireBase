@@ -5,7 +5,7 @@ const db = firebase.firestore();
 const todoForm = document.getElementById('todo_form');
 
 const create = (name, url, description) => {
-    db.collection('tasks').doc().set({
+    db.collection('Usuarios').doc(name).set({
         name,
         url,
         description
