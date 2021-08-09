@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,18 @@
   <title>Document</title>
 
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
   <!-- LIBRERIAS SDK PARA FIREBASE
       https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
 
-          <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>  
+  <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
 
 
 
@@ -37,16 +41,31 @@
     firebase.analytics();
   </script>
 </head>
-<body>
-    <!--View logeo usuario-->
-    <input id="email" type="email" placeholder="Ingresa email">
-    <input id="password" type="email" placeholder="Ingresa contraseña">
-      <!--Boton con funcion onclick:
-          envio los datos de email y contraseña a base de datos-->
-    <button onclick="funcion()">Enviar</button>
 
-    <!-- llamo a mi app.js.... dentro esta declarada la funcion del boton "Enviar"-->
-    <script src="app.js"></script>
-  
+<body>
+  <!-- index.html -->
+  <form id="todo_form">
+    <div>
+      <input type="text" id="todo_name" placeholder="Nombre">
+    </div>
+    <div>
+      <input type="url" id="todo_url" placeholder="producto">
+    </div>
+    <div>
+      <textarea rows="4" id="todo_description" placeholder="Descripción"></textarea>
+    </div>
+    <button id='btn_todo_form'>Guardar</button>
+  </form>
+  <!--
+
+  <input id="email" type="email" placeholder="Ingresa email">
+  <input id="password" type="email" placeholder="Ingresa contraseña">
+
+  <button onclick="funcion()">Enviar</button>
+  -->
+  <!-- llamo a mi app.js.... dentro esta declarada la funcion del boton "Enviar"-->
+  <script src="app.js"></script>
+
 </body>
+
 </html>
